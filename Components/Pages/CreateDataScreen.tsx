@@ -2,10 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import FormButton from './UIComponents/Form';
 import { AuthContext } from './../Providers/AuthProvider';
-import databaseResp from './../Data/database';
-import { Select } from './UIComponents/Select';
 import FormInput from './UIComponents/FormInput';
 import database from '@react-native-firebase/database';
+import { createOneButtonAlert } from './UIComponents/AlertProvider';
 
 export default function HomeScreen() {
 
@@ -31,18 +30,15 @@ export default function HomeScreen() {
         }))
 
     }
-    let createData = (title: any) => {
-
-
-        // console.log('25555555555555555', dataSnap[2]);
-        // console.log('2666666666666666', dataSnap[0]);
-        console.log('2777777777777777', dataSnapLength);
-        database().ref('/').child(dataSnapLength+ "").set(
+    let createData = async (title: any) => {
+        await database().ref('/').child(dataSnapLength + "").set(
             {
                 title: title,
                 uid: (Math.random() * 999999999999999999) + 1,
                 isChecked: false
             });
+
+        createOneButtonAlert("Success!", 'Data updated')
 
 
     }
@@ -50,8 +46,6 @@ export default function HomeScreen() {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Welcome user Create a data {user.uid}</Text>
-
             <FormInput
                 value={title}
                 placeholderText='City'

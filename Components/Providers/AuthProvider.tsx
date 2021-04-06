@@ -2,19 +2,12 @@ import React, { createContext, useState } from 'react';
 import auth from '@react-native-firebase/auth';
 import { createOneButtonAlert } from '../Pages/UIComponents/AlertProvider';
 
-/**
- * This provider is created
- * to access user in whole app
- */
-
-// export const AuthContext = createContext({});
 export const AuthContext = createContext<IAuth | null>(null);
 
 type ComponentProps = {
   children: any;
 }
 export const AuthProvider = (props: ComponentProps): JSX.Element =>{
-    // const [children] = props;
   const [user, setUser] = useState(null);
   
   return (

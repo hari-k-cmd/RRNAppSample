@@ -1,10 +1,6 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
-// import { windowHeight, windowWidth } from '../utils/Dimensions';
-
 export default function FormButton(props:Props) {
-    // const [ buttonTitle, ...rest ] = props;
-
     return (
       <TouchableOpacity style={props.disabled? styles.buttonContainerDisabled : styles.buttonContainer} disabled={props.disabled} onPress={props.onPress}>
         <Text style={styles.buttonText}>{props.buttonTitle}</Text>

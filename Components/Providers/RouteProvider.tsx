@@ -7,8 +7,6 @@ import { AuthContext } from './AuthProvider';
 import Loading from '../Pages/UIComponents/Loading';
 
 export default function Routes() {
-    //   const { user, setUser } = useContext(AuthContext);
-    // const { user, setUser } = useState('');
     const [loading, setLoading] = useState(true);
     const [initializing, setInitializing] = useState(true);
 
@@ -17,7 +15,6 @@ export default function Routes() {
       return null;
     }
     const { user, setUser } = context;
-    // Handle user state changes
     function onAuthStateChanged(user: any) {
         setUser(user);
         if (initializing) setInitializing(false);
