@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "492840204116",
+    "firebase_url": "https://rrnappsamplets-default-rtdb.firebaseio.com",
+    "project_id": "rrnappsamplets",
+    "storage_bucket": "rrnappsamplets.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492840204116:android:3a285f9d300bd6ba2e7ac1",
+        "android_client_info": {
+          "package_name": "com.rrnappsamplets"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492840204116-t9djnradp1dcld5ksg9e7j8svotlb9mg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVeT6i9kv6a9FNZ4v1-GRVtvfviUv4OoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492840204116-t9djnradp1dcld5ksg9e7j8svotlb9mg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
